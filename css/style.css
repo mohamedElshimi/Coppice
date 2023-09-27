@@ -1,0 +1,319 @@
+:root {
+  --main-color: #1e4b67;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Start Components */
+.main-p{
+  color:rgb(126, 125, 125);
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.image-overlay{
+  transition:0.5s ease-in-out;
+
+}
+
+.image-overlay:hover{
+  transform: scale(1.1);
+  opacity:.7;
+  transition:0.5s ease-in-out;
+}
+
+
+.main-heading {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 4.5px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.main-btn {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0.5rem 2.5rem;
+  color: white;
+  transition: 0.3s;
+}
+.main-btn::before {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 30px;
+  height: 1px;
+  top: 50%;
+  left: -15px;
+}
+.main-btn::after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  width: 30px;
+  height: 1px;
+  top: 50%;
+  right: -15px;
+}
+
+.main-btn a {
+  color: white;
+}
+
+.main-btn:hover {
+  background-color: white;
+}
+.main-btn:hover::before,
+.main-btn:hover::after {
+  background-color: var(--main-color);
+}
+.main-btn:hover a {
+  color: var(--main-color);
+}
+
+/* End Components */
+
+/* start navbar */
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 999;
+  background-color: #0000005d;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white;
+      font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--main-color);
+}
+
+.mmm > svg:hover {
+  background-color: white;
+  color: var(--main-color);
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+.mmm > svg{
+  color: white;
+  border: 1px solid white;
+  padding: 10px 7px;
+  font-size: 12px;
+  line-height: 32px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+@media (max-width:992px) {
+  .navbar{
+    background-color: #0000003e;
+  }
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--main-color);
+}
+/* end navbar */
+/* start landing */
+
+.landing {
+  background-image: url(../images/eadded46702631.58605976a27f7.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: #aaaaaa;
+  background-blend-mode: multiply;
+}
+
+.landing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.landing .heading {
+  z-index: 10;
+}
+
+.logo {
+  z-index: 5;
+}
+nav{
+  min-height: 80px;
+}
+.head-tariar{
+  font-weight: 300;
+}
+/* ----------------------------------------------------------- */
+/* Section 1 Carousel */
+.who-img{
+  height: 200px;
+  background: url('../images/Coppice-Logo.png') no-repeat  100%/100%;
+}
+/* ----------------------------------------------------------- */
+/* Section 2 */
+section:nth-of-type(2){
+  position: relative;
+  padding-top: 50px;
+}
+.serv-image-overlay{
+  position: absolute;
+  min-height: 400px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #888 url('../images/service-bg.jpg') no-repeat 100%/100%;
+  background-blend-mode: color-burn;
+  z-index: 20;
+}
+.ser-cards{
+  position: relative;
+  z-index: 30;
+}
+.ser-title{
+  margin-top: 18px;
+  margin-bottom: 0;
+  letter-spacing: .9px;
+}
+.ser-card{
+  background-color: #fff;
+  border: none;
+  min-height: 300px;
+}
+
+/* ------------------------------------------------------------ */
+/* Section 3 */
+/* ----------------------------------------------------------- */
+/* Section 4 */
+/* ----------------------------------------------------------- */
+/* Section 5 */
+.list-project li{
+  background-color: #fff;
+  padding-block: 5px;
+  width: 120px;
+}
+.carousel-item img{
+  height: 300px;
+}
+.overlay-list{
+  margin-left: -6px;
+  transition: 0.3s;
+}
+.list-project li:first-of-type{
+  margin-top: -20px;
+  margin-left: -6px;
+}
+.overlay-list:hover{
+  transform: translateX(5px);
+}
+.list-active{
+  transform: translateX(10px);
+}
+/* ----------------------------------------------------------- */
+/* Section 6 */
+section:nth-of-type(6){
+  position: relative;
+  padding-top: 50px;
+}
+.partner{
+  min-height: 200px;
+  background-color: #fff;
+  border: none;
+}
+.par-image-overlay{
+  position: absolute;
+  min-height: 350px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #888 url('../images/service-bg.jpg') no-repeat 100%/100%;
+  background-blend-mode: color-burn;
+  z-index: 20;
+}
+/* ----------------------------------------------------------- */
+/* Section 7 */
+section:last-of-type{
+  max-height: 500px;
+}
+iframe{
+  width: 100%;
+  height: 500px;
+  
+}
+/* ----------------------------------------------------------- */
+/* Footer */
+footer{
+  min-height: 300px;
+  background: #555 url('/images/footer.jpg') no-repeat 100%/100%;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+.get-touch{
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 4.5px;
+  color: #fff;
+  font-size: 14px;
+}
+.get-div{
+  text-align: end;
+  color: #fff;
+}
+.get-div p{
+  margin: 0 ;
+  font-size: 14px;
+}
+.mt-6{
+  margin-top: 70px;
+}
+.foot-des{
+  color: #b9b9b9
+}
+.social-icon a{
+  text-decoration: none;
+}
+.social-icon svg{
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 3px;
+  color: white;
+  transition: 0.5s;
+  min-width: 18px;
+}
+.social-icon svg:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
