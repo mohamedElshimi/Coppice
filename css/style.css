@@ -1,33 +1,37 @@
 :root {
   --main-color: #1e4b67;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  box-sizing: border-box !important;
+  margin: 0;
+}
+
+* {
   font-family: "Roboto", sans-serif;
 }
 
 /* Start Components */
-.main-p{
-  color:rgb(126, 125, 125);
+.main-p {
+  color: rgb(126, 125, 125);
   font-size: 16px;
   line-height: 32px;
   font-weight: 400;
 }
 
-.image-overlay{
-  transition:0.5s ease-in-out;
-
+.image-overlay {
+  transition: 0.5s ease-in-out;
 }
 
-.image-overlay:hover{
+.image-overlay:hover {
   transform: scale(1.1);
-  opacity:.7;
-  transition:0.5s ease-in-out;
+  opacity: 0.7;
+  transition: 0.5s ease-in-out;
 }
-
 
 .main-heading {
   font-size: 14px;
@@ -45,6 +49,7 @@ body {
   color: white;
   transition: 0.3s;
 }
+
 .main-btn::before {
   content: "";
   position: absolute;
@@ -54,6 +59,7 @@ body {
   top: 50%;
   left: -15px;
 }
+
 .main-btn::after {
   content: "";
   position: absolute;
@@ -71,10 +77,12 @@ body {
 .main-btn:hover {
   background-color: white;
 }
+
 .main-btn:hover::before,
 .main-btn:hover::after {
   background-color: var(--main-color);
 }
+
 .main-btn:hover a {
   color: var(--main-color);
 }
@@ -89,26 +97,30 @@ body {
   left: 0;
   background-color: transparent;
   z-index: 999;
-  background-color: #0000005d;
+  transition: 0.2s;
+}
+
+.navbar.dark {
+  background-color: hsla(0, 0%, 0%, 0.8);
 }
 
 .navbar .navbar-nav .nav-link {
-  color: white;
-      font-size: 12px;
-    line-height: 18px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    padding: 5px 15px;
-    text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 5px 15px;
+  text-transform: uppercase;
 }
 
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .nav-link:hover {
-  color: var(--main-color);
+  color: white;
 }
 
-.mmm > svg:hover {
+.links-div:hover {
   background-color: white;
   color: var(--main-color);
 }
@@ -117,21 +129,22 @@ body {
   color: white;
   font-size: 25px;
   border-color: white;
+  border: none !important;
 }
-.mmm > svg{
+.links-div {
   color: white;
   border: 1px solid white;
-  padding: 10px 7px;
+  box-sizing: border-box !important;
+  padding: 8px 4px;
   font-size: 12px;
   line-height: 32px;
   font-weight: 400;
   transition: 0.3s;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
 }
-@media (max-width:992px) {
-  .navbar{
-    background-color: #0000003e;
-  }
-}
+
 .navbar .navbar-toggler:focus {
   box-shadow: none;
 }
@@ -140,8 +153,8 @@ body {
   border-color: var(--main-color);
 }
 /* end navbar */
-/* start landing */
 
+/* start landing */
 .landing {
   background-image: url(../images/eadded46702631.58605976a27f7.jpg);
   min-height: 100vh;
@@ -170,141 +183,138 @@ body {
 .logo {
   z-index: 5;
 }
-nav{
+nav {
   min-height: 80px;
 }
-.head-tariar{
+.head-tariar {
   font-weight: 300;
 }
 /* ----------------------------------------------------------- */
 /* Section 1 Carousel */
-.who-img{
+.who-img {
   height: 200px;
-  background: url('../images/Coppice-Logo.png') no-repeat  100%/100%;
+  max-width: 400px;
+  background: url("../images/Coppice-Logo.png") no-repeat 100%/100%;
 }
 /* ----------------------------------------------------------- */
 /* Section 2 */
-section:nth-of-type(2){
+section:nth-of-type(2) {
   position: relative;
   padding-top: 50px;
 }
-.serv-image-overlay{
+.serv-image-overlay {
   position: absolute;
   min-height: 400px;
   width: 100%;
   top: 0;
   left: 0;
-  background: #888 url('../images/service-bg.jpg') no-repeat 100%/100%;
+  background: #888 url("../images/service-bg.jpg") no-repeat 100%/100%;
   background-blend-mode: color-burn;
   z-index: 20;
 }
-.ser-cards{
+.ser-cards {
   position: relative;
   z-index: 30;
 }
-.ser-title{
-  margin-top: 18px;
+.ser-title {
+  margin-top: 16px;
   margin-bottom: 0;
-  letter-spacing: .9px;
+  letter-spacing: 0.9px;
+  color: var(--main-color);
+  position: relative;
 }
-.ser-card{
+
+.ser-card {
   background-color: #fff;
   border: none;
   min-height: 300px;
 }
 
-/* ------------------------------------------------------------ */
-/* Section 3 */
-/* ----------------------------------------------------------- */
-/* Section 4 */
-/* ----------------------------------------------------------- */
-/* Section 5 */
-.list-project li{
+.list-project li {
   background-color: #fff;
   padding-block: 5px;
   width: 120px;
 }
-.carousel-item img{
+.carousel-item img {
   height: 300px;
 }
-.overlay-list{
+.overlay-list {
   margin-left: -6px;
   transition: 0.3s;
 }
-.list-project li:first-of-type{
+.list-project li:first-of-type {
   margin-top: -20px;
   margin-left: -6px;
 }
-.overlay-list:hover{
+.overlay-list:hover {
   transform: translateX(5px);
 }
-.list-active{
+.list-active {
   transform: translateX(10px);
 }
 /* ----------------------------------------------------------- */
 /* Section 6 */
-section:nth-of-type(6){
+section:nth-of-type(6) {
   position: relative;
   padding-top: 50px;
 }
-.partner{
+.partner {
   min-height: 200px;
   background-color: #fff;
   border: none;
 }
-.par-image-overlay{
+.par-image-overlay {
   position: absolute;
   min-height: 350px;
   width: 100%;
   top: 0;
   left: 0;
-  background: #888 url('../images/service-bg.jpg') no-repeat 100%/100%;
+  background: #888 url("../images/service-bg.jpg") no-repeat 100%/100%;
   background-blend-mode: color-burn;
   z-index: 20;
 }
 /* ----------------------------------------------------------- */
 /* Section 7 */
-section:last-of-type{
+section:last-of-type {
   max-height: 500px;
 }
-iframe{
+iframe {
   width: 100%;
   height: 500px;
-  
 }
 /* ----------------------------------------------------------- */
 /* Footer */
-footer{
+footer {
   min-height: 300px;
-  background: #555 url('/images/footer.jpg') no-repeat 100%/100%;
+  background: #555 url("/images/footer.jpg") no-repeat 100%/100%;
   background-size: cover;
   background-blend-mode: multiply;
 }
-.get-touch{
+.get-touch {
   font-weight: 300;
   font-style: normal;
   letter-spacing: 4.5px;
   color: #fff;
   font-size: 14px;
 }
-.get-div{
+.get-div {
   text-align: end;
   color: #fff;
 }
-.get-div p{
-  margin: 0 ;
+.get-div p {
+  margin: 0;
   font-size: 14px;
 }
-.mt-6{
+.mt-6 {
   margin-top: 70px;
 }
-.foot-des{
-  color: #b9b9b9
+.foot-des {
+  color: #b9b9b9;
 }
-.social-icon a{
+.social-icon a {
   text-decoration: none;
 }
-.social-icon svg{
+.social-icon svg {
   border: 1px solid black;
   padding: 8px;
   border-radius: 3px;
@@ -312,7 +322,7 @@ footer{
   transition: 0.5s;
   min-width: 18px;
 }
-.social-icon svg:hover{
+.social-icon svg:hover {
   background-color: white;
   color: black;
   cursor: pointer;

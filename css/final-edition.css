@@ -1,0 +1,44 @@
+.icon-container {
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+  text-align: center;
+}
+.menu-icon {
+  width: 28px;
+  height: 14px;
+  position: relative;
+}
+.menu-icon span {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 1px;
+  transition: 0.3s;
+  background-color: white;
+}
+.menu-icon span:first-child {
+  top: 0;
+}
+.menu-icon span:nth-child(2) {
+  top: 6px;
+}
+.menu-icon span:last-child {
+  top: 12px;
+}
+/* .menu-icon:hover span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon:hover span:first-child {
+  top: 6px;
+  transform: rotate(45deg);
+}
+.menu-icon:hover span:last-child {
+  top: 6px;
+  transform: rotate(-45deg);
+} */
