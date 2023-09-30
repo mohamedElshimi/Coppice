@@ -135,9 +135,10 @@ body {
   color: white;
   border: 1px solid white;
   box-sizing: border-box !important;
-  padding: 8px 4px;
+  /* padding: 8px 4px; */
+  text-align: center;
   font-size: 12px;
-  line-height: 32px;
+  line-height: 30px;
   font-weight: 400;
   transition: 0.3s;
   cursor: pointer;
@@ -326,4 +327,7 @@ footer {
   background-color: white;
   color: black;
   cursor: pointer;
+}
+.link-change{
+  text-decoration: none;
 }

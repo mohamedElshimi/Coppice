@@ -1,0 +1,27 @@
+@font-face {
+  font-family: rubik;
+  src: url(../fonts/Rubik-VariableFont_wght.ttf);
+}
+*{
+  font-family: rubik !important;
+}
+.list-project li {
+  background-color: #fff;
+  padding-block: 5px;
+  width: 120px;
+}
+.carousel-item img {
+  height: 300px;
+}
+.overlay-list {
+  margin-right: -6px;
+  transition: 0.3s;
+}
+.list-project li:first-of-type {
+  margin-top: -20px;
+  margin-right: -20px;
+  text-align: center;
+}
+.list-active {
+  transform: translateX(-12px);
+}

@@ -85,35 +85,9 @@ iconContainer.addEventListener("click", () => {
   }
 });
 
-// setInterval(()=>{
-//     checkClass()
-// },2000)
-// carousel[0].addEventListener('fullscreenchange',checkClass)
-// carousel[1].addEventListener('fullscreenchange',checkClass)
-// carousel[2].addEventListener('fullscreenchange',checkClass)
-// function checkClass() {
-//     for (let i = 0; i < carousel.length; i++) {
-//         if (carousel[i].classList.contains('active')) {
-//             target=i;
-//         }
-
-//     }
-//     for (let i = 0; i < list.length; i++) {
-//         list[i].classList.remove('list-active');
-
-//     }
-//     list[target].classList.add('list-active')
-// }
-
-// let classWatcher = new ClassWatcher(carousel[0], 'trigger', workOnClassAdd(0), workOnClassRemoval(0))
-// let classWatcher2 = new ClassWatcher(carousel[1], 'trigger', workOnClassAdd(1), workOnClassRemoval(1))
-// let classWatcher3 = new ClassWatcher(carousel[2], 'trigger', workOnClassAdd(2), workOnClassRemoval(2))
-
-// function workOnClassAdd(i) {
-//     list[i].classList.add('list-active')
-// }
-// function workOnClassRemoval(i) {
-//     list[i].classList.remove('list-active')
-// }
-
-
+let li2 = document.getElementsByClassName('overlay-list');
+var car = document.getElementById('carouselExampleAutoplaying');
+car.addEventListener("slid.bs.carousel", function (e) {
+  li2[e.from].classList.remove('list-active')
+  li2[e.to].classList.add('list-active')
+});
