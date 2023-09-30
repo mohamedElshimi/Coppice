@@ -115,3 +115,5 @@ iconContainer.addEventListener("click", () => {
 // function workOnClassRemoval(i) {
 //     list[i].classList.remove('list-active')
 // }
+
+
