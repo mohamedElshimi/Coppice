@@ -86,7 +86,6 @@ iconContainer.addEventListener("click", () => {
 });
 
 let li2 = document.getElementsByClassName('overlay-list');
-
 var car = document.getElementById('carouselExampleAutoplaying');
 car.addEventListener("slid.bs.carousel", function (e) {
   li2[e.from].classList.remove('list-active')

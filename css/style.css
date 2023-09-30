@@ -157,7 +157,7 @@ body {
 
 /* start landing */
 .landing {
-  background-image: url(../images/eadded46702631.58605976a27f7.jpg);
+  background-image: url(../images/land.jpg);
   min-height: 100vh;
   background-size: cover;
   background-position: center;
@@ -191,10 +191,10 @@ nav {
   font-weight: 300;
 }
 /* ----------------------------------------------------------- */
-/* Section 1 Carousel */
+/* Section who we are */
 .who-img {
-  height: 200px;
-  max-width: 400px;
+  height: 150px;
+  max-width: 300px;
   background: url("../images/Coppice-Logo.png") no-repeat 100%/100%;
 }
 /* ----------------------------------------------------------- */
