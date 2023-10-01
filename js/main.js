@@ -91,3 +91,51 @@ car.addEventListener("slid.bs.carousel", function (e) {
   li2[e.from].classList.remove('list-active')
   li2[e.to].classList.add('list-active')
 });
+
+
+// Get a reference to the carousel element
+var allCarsouel = document.querySelectorAll('.carousel-fade');
+var targetCarsouel;
+var intervalId; // Variable to store the interval ID
+var isHovered = false; // Flag to track hover state
+console.log(allCarsouel);
+
+// Function to start auto-play
+function startAutoPlay(targetCarsouel) {
+  intervalId = setInterval(function () {
+    // Trigger the carousel to move to the next slide
+    nextSlide(targetCarsouel);
+  }, 1000); // Adjust the time interval as needed (e.g., 3 seconds)
+}
+
+// Function to stop auto-play
+function stopAutoPlay() {
+  clearInterval(intervalId);
+}
+
+// Function to move to the next slide
+function nextSlide(targetCarsouel) {
+  var activeSlide = targetCarsouel.querySelector('.carousel-item.active');
+  var nextSlide= activeSlide.nextElementSibling;
+  if (activeSlide.nextElementSibling) {
+    nextSlide = activeSlide.nextElementSibling
+  } else {
+    nextSlide = targetCarsouel.querySelectorAll('.carousel-item')[0];
+  }
+  activeSlide.classList.remove('active');
+  nextSlide.classList.add('active');
+}
+
+Array.from(allCarsouel).forEach(function (targetCarsouel) {
+  targetCarsouel.addEventListener('mouseenter', function () {
+    console.log('Enter');
+    isHovered = true;
+    startAutoPlay(targetCarsouel);
+  });
+  targetCarsouel.addEventListener('mouseleave', function () {
+    isHovered = false;
+    console.log('Leave')
+    stopAutoPlay();
+  
+  });
+});
