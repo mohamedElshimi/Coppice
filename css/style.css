@@ -16,6 +16,7 @@ body {
 }
 
 /* Start Components */
+
 .main-p {
   color: rgb(126, 125, 125);
   font-size: 16px;
@@ -34,11 +35,11 @@ body {
 }
 
 .main-heading {
-  font-size: 14px;
   line-height: 18px;
   letter-spacing: 4.5px;
   font-weight: 300;
   text-transform: uppercase;
+  color: var(--main-color);
 }
 
 .main-btn {
@@ -187,9 +188,6 @@ body {
 nav {
   min-height: 80px;
 }
-.head-tariar {
-  font-weight: 300;
-}
 /* ----------------------------------------------------------- */
 /* Section who we are */
 .who-img {
@@ -228,6 +226,10 @@ section:nth-of-type(2) {
 .ser-card {
   background-color: #fff;
   border: none;
+  min-height: 300px;
+}
+
+.list-project {
   min-height: 300px;
 }
 

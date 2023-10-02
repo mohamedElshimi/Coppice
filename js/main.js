@@ -22,7 +22,7 @@ Array.from(navLinks).forEach(link => {
 let nav = document.querySelector(".navbar");
 
 window.onscroll = function () {
-  if (window.scrollY >= 700) {
+  if (window.scrollY >= 500) {
     nav.classList.add("dark");
   } else {
     nav.classList.remove("dark");
@@ -59,7 +59,7 @@ iconContainer.addEventListener("click", () => {
 });
 
 let li2 = document.getElementsByClassName('overlay-list');
-var car = document.getElementById('carouselExampleAutoplaying');
+let car = document.getElementById('carouselExampleAutoplaying');
 car.addEventListener("slid.bs.carousel", function (e) {
   li2[e.from].classList.remove('list-active')
   li2[e.to].classList.add('list-active')
