@@ -5,45 +5,18 @@ setTimeout(() => {
   main.style.display = "block";
 }, 2490);
 
-// Carousel
-let target;
-let list = document.getElementsByClassName("overlay-list");
-let carousel = document.getElementsByClassName("carousel-item");
 // navbar change
-let li = document.querySelectorAll(".nav-item a");
-li[0].addEventListener("click", () => {
-  removeClass();
-  li[0].classList.add("active");
+let navLinks = document.querySelectorAll(".nav-item a");
+Array.from(navLinks).forEach(link => {
+  link.addEventListener("click", (e) => {
+      e.preventDefault();
+      navLinks.forEach(link => link.classList.remove("active"));
+      link.classList.add("active");
+      const targetId = link.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+      targetSection.scrollIntoView({ behavior: "smooth" });
+  });
 });
-li[1].addEventListener("click", () => {
-  removeClass();
-  li[1].classList.add("active");
-});
-li[2].addEventListener("click", () => {
-  removeClass();
-  li[2].classList.add("active");
-});
-li[3].addEventListener("click", () => {
-  removeClass();
-  li[3].classList.add("active");
-});
-li[4].addEventListener("click", () => {
-  removeClass();
-  li[4].classList.add("active");
-});
-li[5].addEventListener("click", () => {
-  removeClass();
-  li[5].classList.add("active");
-});
-li[6].addEventListener("click", () => {
-  removeClass();
-  li[6].classList.add("active");
-});
-function removeClass() {
-  for (let i = 0; i < li.length; i++) {
-    li[i].classList.remove("active");
-  }
-}
 
 // Nav Bar
 let nav = document.querySelector(".navbar");
