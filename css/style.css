@@ -366,6 +366,7 @@ footer {
 .link-change {
   text-decoration: none;
 }
+<<<<<<< HEAD
 
 .carousel-fade .carousel-item img {
   height: 300px;
@@ -374,3 +375,48 @@ footer {
 .main-color {
   color: var(--main-color) !important;
 }
+=======
+/* -------------------------------------------------- */
+.abs-contect{
+  position: fixed;
+  width: 130px;
+  min-height: 30px;
+  top: 90px;
+  left: 0;
+  z-index: 555;
+  font-size: 18px;
+}
+.phone-contact,
+.email-contact,
+.linkedin-contact{
+  width: 100%;
+  height: 30px;
+  margin-block: 10px;
+  border-radius: 0 8px 8px 0;
+  margin-left: -80px;
+  transition: 0.5s;
+  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.749);
+  line-height: 30px;
+}
+/* .phone-contact{
+  background-color: green;
+}
+.email-contact{
+  background-color: red;
+}
+.linkedin-contact{
+  background-color: blue;
+} */
+.phone-contact:hover,
+.email-contact:hover,
+.linkedin-contact:hover{
+  margin-left: 0px;
+}
+.abs-contect a{
+  text-decoration: none;
+}
+.abs-contect svg{
+  color: #1e4b67 !important;
+}
+>>>>>>> 7be3a77a01fc36cd31d712391b86f6bf014abb0d
