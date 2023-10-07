@@ -121,7 +121,7 @@ body {
   color: white;
 }
 
-.links-div:hover {
+.language:hover {
   background-color: white;
   color: var(--main-color);
 }
@@ -132,11 +132,50 @@ body {
   border-color: white;
   border: none !important;
 }
-.links-div {
+
+.icon-container {
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+  text-align: center;
+}
+
+.menu-icon {
+  width: 28px;
+  height: 14px;
+  position: relative;
+}
+
+.menu-icon span {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 1px;
+  transition: 0.3s;
+  background-color: white;
+}
+
+.menu-icon span:first-child {
+  top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+  top: 6px;
+}
+
+.menu-icon span:last-child {
+  top: 12px;
+}
+
+.language {
   color: white;
   border: 1px solid white;
   box-sizing: border-box !important;
-  /* padding: 8px 4px; */
   text-align: center;
   font-size: 12px;
   line-height: 30px;
@@ -188,15 +227,15 @@ body {
 nav {
   min-height: 80px;
 }
-/* ----------------------------------------------------------- */
+
 /* Section who we are */
 .who-img {
   height: 150px;
   max-width: 300px;
   background: url("../images/Coppice-Logo.png") no-repeat 100%/100%;
 }
-/* ----------------------------------------------------------- */
-/* Section 2 */
+
+/* Services */
 section:nth-of-type(2) {
   position: relative;
   padding-top: 50px;
@@ -211,10 +250,12 @@ section:nth-of-type(2) {
   background-blend-mode: color-burn;
   z-index: 20;
 }
+
 .ser-cards {
   position: relative;
   z-index: 30;
 }
+
 .ser-title {
   margin-top: 16px;
   margin-bottom: 0;
@@ -228,7 +269,7 @@ section:nth-of-type(2) {
   border: none;
   min-height: 300px;
 }
-/* ---------------------------------- */
+
 /* Projects */
 .our-projects {
   height: 600px;
@@ -237,7 +278,7 @@ section:nth-of-type(2) {
   position: relative;
 }
 
-.list-project {
+.projects-list {
   position: absolute;
   top: calc(50% - 170px);
   left: 100px;
@@ -253,7 +294,7 @@ section:nth-of-type(2) {
   color: white;
 }
 
-.el3os {
+.projects-carousel {
   position: absolute;
   width: 50%;
   height: 340px;
@@ -262,7 +303,7 @@ section:nth-of-type(2) {
   right: 100px;
   box-shadow: 0px 0px 30px 2px black;
 }
-.el3os img {
+.projects-carousel img {
   height: 340px;
 }
 
@@ -280,25 +321,32 @@ section:nth-of-type(2) {
 .overlay-list {
   margin-left: -6px;
   transition: 0.3s;
+  opacity: 0.8;
 }
-.list-project li:first-of-type {
+
+.projects-list li:first-of-type {
   text-align: center;
   margin-left: -6px;
 }
+
 .list-active {
   transform: translateX(10px);
+  opacity: 1;
+  font-size: 18px;
 }
-/* ----------------------------------------------------------- */
+
 /* Section 6 */
 section:nth-of-type(6) {
   position: relative;
   padding-top: 50px;
 }
+
 .partner {
   min-height: 200px;
   background-color: #fff;
   border: none;
 }
+
 .par-image-overlay {
   position: absolute;
   min-height: 350px;
@@ -309,16 +357,17 @@ section:nth-of-type(6) {
   background-blend-mode: color-burn;
   z-index: 20;
 }
-/* ----------------------------------------------------------- */
-/* Section 7 */
+
+/* Map */
 section:last-of-type {
   max-height: 500px;
 }
+
 iframe {
   width: 100%;
   height: 500px;
 }
-/* ----------------------------------------------------------- */
+
 /* Footer */
 footer {
   min-height: 300px;
@@ -326,6 +375,7 @@ footer {
   background-size: cover;
   background-blend-mode: multiply;
 }
+
 .get-touch {
   font-weight: 300;
   font-style: normal;
@@ -333,23 +383,29 @@ footer {
   color: #fff;
   font-size: 14px;
 }
+
 .get-div {
   text-align: end;
   color: #fff;
 }
+
 .get-div p {
   margin: 0;
   font-size: 14px;
 }
+
 .mt-6 {
   margin-top: 70px;
 }
+
 .foot-des {
   color: #b9b9b9;
 }
+
 .social-icon a {
   text-decoration: none;
 }
+
 .social-icon svg {
   border: 1px solid black;
   padding: 8px;
@@ -358,25 +414,27 @@ footer {
   transition: 0.5s;
   min-width: 18px;
 }
+
 .social-icon svg:hover {
   background-color: white;
   color: black;
   cursor: pointer;
 }
+
 .link-change {
   text-decoration: none;
 }
-<<<<<<< HEAD
 
 .carousel-fade .carousel-item img {
   height: 300px;
 }
+
 .box h4,
 .main-color {
   color: var(--main-color) !important;
 }
-=======
-/* -------------------------------------------------- */
+
+/* mail and phone */
 .abs-contect{
   position: fixed;
   width: 130px;
@@ -386,6 +444,7 @@ footer {
   z-index: 555;
   font-size: 18px;
 }
+
 .phone-contact,
 .email-contact,
 .linkedin-contact{
@@ -399,24 +458,17 @@ footer {
   background-color: rgba(255, 255, 255, 0.749);
   line-height: 30px;
 }
-/* .phone-contact{
-  background-color: green;
-}
-.email-contact{
-  background-color: red;
-}
-.linkedin-contact{
-  background-color: blue;
-} */
+
 .phone-contact:hover,
 .email-contact:hover,
 .linkedin-contact:hover{
   margin-left: 0px;
 }
+
 .abs-contect a{
   text-decoration: none;
 }
+
 .abs-contect svg{
   color: #1e4b67 !important;
 }
->>>>>>> 7be3a77a01fc36cd31d712391b86f6bf014abb0d
