@@ -1,9 +1,9 @@
 // Page dosen't show untill animation done
-let main = document.getElementsByTagName("main")[0];
-main.style.display = "none";
-setTimeout(() => {
-  main.style.display = "block";
-}, 2490);
+// let main = document.getElementsByTagName("main")[0];
+// main.style.display = "none";
+// setTimeout(() => {
+//   main.style.display = "block";
+// }, 2490);
 
 // navbar change
 let navLinks = document.querySelectorAll(".nav-item a");
@@ -72,7 +72,6 @@ var allCarsouel = document.querySelectorAll('.carousel-fade');
 var targetCarsouel;
 var intervalId; // Variable to store the interval ID
 var isHovered = false; // Flag to track hover state
-console.log(allCarsouel);
 
 // Function to start auto-play
 function startAutoPlay(targetCarsouel) {
@@ -102,14 +101,44 @@ function nextSlide(targetCarsouel) {
 
 Array.from(allCarsouel).forEach(function (targetCarsouel) {
   targetCarsouel.addEventListener('mouseenter', function () {
-    console.log('Enter');
     isHovered = true;
     startAutoPlay(targetCarsouel);
   });
   targetCarsouel.addEventListener('mouseleave', function () {
     isHovered = false;
-    console.log('Leave')
     stopAutoPlay();
   
   });
 });
+
+// /////////////////////////////////////////////
+
+// Initialize Email.js with your user_id
+emailjs.init("service_x9l2di2");
+
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Send the email using Email.js
+        emailjs.send("service_x9l2di2", "your-template-id", {
+            to_email: "mohameddessam303@gmail.com",
+            from_name: name,
+            message: message
+        })
+        .then(function(response) {
+            console.log('Email sent successfully:', response);
+            alert('Email sent successfully!');
+        }, function(error) {
+            console.error('Email sending failed:', error);
+            alert('Email sending failed. Please try again later.');
+        });
+    });
+});
+
