@@ -64,6 +64,15 @@ let car = document.getElementById('carouselExampleAutoplaying2');
 car.addEventListener("slid.bs.carousel", function (e) {
   li2[e.from].classList.remove('list-active')
   li2[e.to].classList.add('list-active')
+  console.log(li2[e.to]);
+});
+
+let li2m = document.getElementsByClassName('overlay-list2');
+// let car = document.getElementById('carouselExampleAutoplaying2');
+car.addEventListener("slid.bs.carousel", function (e) {
+  li2m[e.from].classList.remove('list-active')
+  li2m[e.to].classList.add('list-active')
+  console.log(li2m[e.to]);
 });
 
 
@@ -115,9 +124,9 @@ Array.from(allCarsouel).forEach(function (targetCarsouel) {
 
 // Initialize Email.js with your user_id
 emailjs.init("service_x9l2di2");
+emailjs.send()
 
-document.addEventListener('DOMContentLoaded', function () {
-    const contactForm = document.getElementById('contact-form');
+const contactForm = document.getElementById('contact-form');
 
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -127,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const message = document.getElementById('message').value;
 
         // Send the email using Email.js
-        emailjs.send("service_x9l2di2", "your-template-id", {
+        emailjs.send("service_x9l2di2", "template_gg8itj5", {
             to_email: "mohameddessam303@gmail.com",
             from_name: name,
             message: message
@@ -140,5 +149,4 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Email sending failed. Please try again later.');
         });
     });
-});
 
