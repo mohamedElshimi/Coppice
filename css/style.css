@@ -87,7 +87,6 @@ body {
 .main-btn:hover a {
   color: var(--main-color);
 }
-
 /* End Components */
 
 /* start navbar */
@@ -211,8 +210,8 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 0px;
+  width: 100vw;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -229,6 +228,11 @@ nav {
 }
 
 /* Section who we are */
+.who-we-are-heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 36px;
+}
+
 .who-img {
   height: 150px;
   max-width: 300px;
@@ -247,6 +251,7 @@ section:nth-of-type(2) {
   top: 0;
   left: 0;
   background: #888 url("../images/service-bg.jpg") no-repeat 100%/100%;
+  background-size: cover;
   background-blend-mode: color-burn;
   z-index: 20;
 }
@@ -268,6 +273,13 @@ section:nth-of-type(2) {
   background-color: #fff;
   border: none;
   min-height: 300px;
+}
+
+/* exterior */
+.card-name {
+  text-align: center;
+  background-color: #1e4b6790;
+  color: white;
 }
 
 /* Projects */
@@ -296,17 +308,56 @@ section:nth-of-type(2) {
 
 .projects-carousel {
   position: absolute;
-  width: 50%;
+  width: 48%;
   height: 340px;
   z-index: 100;
   top: calc(50% - 170px);
   right: 100px;
   box-shadow: 0px 0px 30px 2px black;
 }
+@media (max-width: 992px) {
+  .projects-carousel {
+    position: absolute;
+    width: 80%;
+    height: 340px;
+    z-index: 100;
+    top: calc(50% - 110px);
+    /* right: 100px; */
+    left: 50vw;
+    transform: translate(-50%);
+    margin: 0 auto;
+    box-shadow: 0px 0px 30px 2px black;
+  }
+  .projects-list2 {
+    position: absolute;
+    top: 50px;
+    left: 50vw;
+    transform: translate(-50%);
+    width: 80%;
+    /* height: 340px; */
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    border-radius: 20px;
+    /* transform: scale(1); */
+    color: white;
+    font-size: 12px;
+  }
+  .list-active {
+    transform: scale(1.02);
+    opacity: 1;
+    font-size: 18px;
+  }
+  
+}
 .projects-carousel img {
   height: 340px;
 }
-
+.bg-car img{
+  /* height: 100%; */
+}
 .our-projects::after {
   content: "";
   position: absolute;
@@ -319,6 +370,11 @@ section:nth-of-type(2) {
 }
 
 .overlay-list {
+  margin-left: -6px;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+.overlay-list2 {
   margin-left: -6px;
   transition: 0.3s;
   opacity: 0.8;
@@ -354,20 +410,48 @@ section:nth-of-type(6) {
   top: 0;
   left: 0;
   background: #888 url("../images/service-bg.jpg") no-repeat 100%/100%;
+  background-size: cover;
   background-blend-mode: color-burn;
   z-index: 20;
 }
 
-/* Map */
-section:last-of-type {
-  max-height: 500px;
+/* contact us */
+.form-group {
+  color: #1e4b67;
+  border: #1e4b67 1px solid;
+  /* border-radius: 16px; */
 }
-
-iframe {
+.pb-16px{
+  padding-bottom: 12px;
+}
+.contact-image-overlay {
+  position: absolute;
+  min-height: 350px;
   width: 100%;
-  height: 500px;
+  top: 0;
+  left: 0;
+  background: #888 url("../images/service-bg.jpg") no-repeat 100%/100%;
+  background-size: cover;
+  background-blend-mode: color-burn;
+  z-index: 20;
 }
-
+.contact {
+  padding-top: 120px;
+  position: relative;
+  z-index: 25;
+}
+.form-filter {
+  backdrop-filter: blur(20px);
+  box-shadow: 1px 1px 15px 0px black;
+}
+iframe {
+  /* border-radius: 16px; */
+  height: 100%;
+}
+.map {
+  box-shadow: 1px 1px 15px 0px black;
+  padding: 0;
+}
 /* Footer */
 footer {
   min-height: 300px;
@@ -429,13 +513,13 @@ footer {
   height: 300px;
 }
 
-.box h4,
+/* .box h4,
 .main-color {
-  color: var(--main-color) !important;
-}
+  color: var(--main-color) ;
+} */
 
 /* mail and phone */
-.abs-contect{
+.abs-contect {
   position: fixed;
   width: 130px;
   min-height: 30px;
@@ -447,7 +531,7 @@ footer {
 
 .phone-contact,
 .email-contact,
-.linkedin-contact{
+.linkedin-contact {
   width: 100%;
   height: 30px;
   margin-block: 10px;
@@ -461,14 +545,14 @@ footer {
 
 .phone-contact:hover,
 .email-contact:hover,
-.linkedin-contact:hover{
+.linkedin-contact:hover {
   margin-left: 0px;
 }
 
-.abs-contect a{
+.abs-contect a {
   text-decoration: none;
 }
 
-.abs-contect svg{
+.abs-contect svg {
   color: #1e4b67 !important;
 }
